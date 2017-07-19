@@ -69,7 +69,7 @@ app.post('/api/survey', function(request, response) {
 
 // PUT API
 app.put('/api/survey/:id', function(request, response) {
-    var query = "update survey set title = '"+ reqest.body.title +"' where sid = '"+ request.params.id +"'";
+    var query = "update survey set title = '"+ request.body.title +"' where sid = '"+ request.params.id +"'";
     executeQuery(response, query);
 });
 
